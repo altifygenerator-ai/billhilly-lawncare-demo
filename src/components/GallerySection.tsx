@@ -36,12 +36,12 @@ export default function GallerySection() {
     <section className="section gallery-section" id="gallery">
       <div className="container gallery-layout">
      <FadeIn className="gallery-copy">
-  <SectionHeading
-    kicker="Recent Lawn Work"
-    title="Our work shows what we do better than stock photos ever could."
-    text="Billhilly Lawncare has real work photos from yards across Northwest Arkansas. This gives homeowners a quick look at the clean mowing, trimming, edging, and yard cleanup work they can expect."
-    light
-  />
+<SectionHeading
+  kicker="Recent Lawn Work"
+  title="See the kind of work we do."
+  text="These are real yards we’ve worked on around Northwest Arkansas. No stock photos, no guessing — just a look at the mowing, trimming, edging, and cleanup work homeowners can expect from Billhilly Lawncare."
+  light
+/>
 
           <div className="gallery-controls">
             <button type="button" onClick={previousImage} aria-label="Previous image">
