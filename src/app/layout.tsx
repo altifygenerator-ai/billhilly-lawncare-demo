@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -26,6 +27,9 @@ export const metadata: Metadata = {
   authors: [{ name: "Billhilly Lawncare" }],
   creator: "Billhilly Lawncare",
   publisher: "Billhilly Lawncare",
+  verification: {
+    google: "EdRVE1Ca9LgxKUq5GJx7ai6Fel_bfAnqZe_Us0YCIs8",
+  },
   alternates: {
     canonical: "/",
   },
@@ -74,7 +78,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
