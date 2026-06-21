@@ -4,7 +4,7 @@ export const site = {
   phone: "479-257-2137",
   phoneHref: "tel:4792572137",
   facebook: "https://www.facebook.com/BillhillyServices",
- 
+ google: "https://share.google/gcAwqW2gCUkP3SmIH",
   areas: ["Bentonville", "Rogers", "Bella Vista", "Centerton"],
   nav: [
     { label: "Services", href: "#services" },

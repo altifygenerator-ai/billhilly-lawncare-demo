@@ -6,7 +6,7 @@ import GallerySection from "@/components/GallerySection";
 import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
-
+import Reviews from "@/components/Reviews";
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
@@ -72,6 +72,7 @@ export default function Home() {
         <TrustStrip />
         <ServicesSection />
         <GallerySection />
+        <Reviews />
         <AboutSection />
         <ContactSection />
       </main>

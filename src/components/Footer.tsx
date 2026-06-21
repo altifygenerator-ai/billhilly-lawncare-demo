@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { FaFacebookF, FaPhone } from "react-icons/fa6";
 import { site } from "@/data/site";
@@ -30,6 +31,19 @@ export default function Footer() {
           <Link href={site.facebook}>
             <FaFacebookF /> Facebook
           </Link>
+        </div>
+
+        <div className="footer-col footer-bbb">
+          <h4>Trusted Business</h4>
+          <div className="bbb-logo-wrap">
+            <Image
+              src="/images/bbb-logo.png"
+              alt="Better Business Bureau"
+              width={150}
+              height={70}
+              className="bbb-logo"
+            />
+          </div>
         </div>
       </div>
 
