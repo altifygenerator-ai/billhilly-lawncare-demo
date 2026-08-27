@@ -159,7 +159,7 @@ img {
       rgba(4, 23, 12, 0.58),
       rgba(4, 23, 12, 0.28)
     ),
-    url("/images/hero-lawn.jpg") center/cover no-repeat;
+    url("/images/hero-lawn.webp") center/cover no-repeat;
 }
 
 .hero-content {
@@ -596,7 +596,7 @@ img {
   padding: 90px 0;
   background:
     linear-gradient(rgba(15, 63, 36, 0.9), rgba(15, 63, 36, 0.9)),
-    url("/images/hero-lawn.jpg") center/cover no-repeat;
+    url("/images/hero-lawn.webp") center/cover no-repeat;
 }
 
 .contact-card {

@@ -2,29 +2,33 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
+const siteUrl = "https://www.billhillylawncare.com";
+const title = "Lawn Care in Northwest Arkansas | Billhilly Lawncare";
+const description =
+  "Veteran-owned Billhilly Lawncare provides mowing, weed control, fertilization, and seasonal yard cleanup in Bentonville, Rogers, Bella Vista, and Centerton, AR.";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.billhillylawncare.com"),
+  metadataBase: new URL(siteUrl),
+  applicationName: "Billhilly Lawncare",
   title: {
-    default: "Billhilly Lawncare | Northwest Arkansas Lawn Care",
+    default: title,
     template: "%s | Billhilly Lawncare",
   },
-  description:
-    "Billhilly Lawncare provides lawn mowing, weed control, fertilization, and spring and fall cleanup services in Bentonville, Rogers, Bella Vista, and Centerton, Arkansas.",
+  description,
   keywords: [
     "Billhilly Lawncare",
+    "lawn care Northwest Arkansas",
     "lawn care Bentonville AR",
     "lawn care Rogers AR",
     "lawn care Bella Vista AR",
     "lawn care Centerton AR",
-    "Northwest Arkansas lawn care",
-    "lawn mowing Bentonville",
+    "lawn mowing Northwest Arkansas",
     "weed control Northwest Arkansas",
-    "fertilization Northwest Arkansas",
-    "spring cleanup",
-    "fall cleanup",
+    "lawn fertilization Northwest Arkansas",
+    "yard cleanup Northwest Arkansas",
     "veteran owned lawn care",
   ],
-  authors: [{ name: "Billhilly Lawncare" }],
+  authors: [{ name: "Billhilly Lawncare", url: siteUrl }],
   creator: "Billhilly Lawncare",
   publisher: "Billhilly Lawncare",
   verification: {
@@ -36,25 +40,23 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.billhillylawncare.com",
+    url: siteUrl,
     siteName: "Billhilly Lawncare",
-    title: "Billhilly Lawncare | Northwest Arkansas Lawn Care",
-    description:
-      "Veteran owned and operated lawn care serving Bentonville, Rogers, Bella Vista, and Centerton, Arkansas.",
+    title,
+    description,
     images: [
       {
         url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Billhilly Lawncare in Northwest Arkansas",
+        alt: "Billhilly Lawncare serving Northwest Arkansas",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Billhilly Lawncare | Northwest Arkansas Lawn Care",
-    description:
-      "Lawn mowing, weed control, fertilization, and seasonal cleanup in Bentonville, Rogers, Bella Vista, and Centerton, Arkansas.",
+    title,
+    description,
     images: ["/images/og-image.jpg"],
   },
   robots: {
@@ -68,7 +70,7 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
-  category: "local business",
+  category: "lawn care service",
 };
 
 export default function RootLayout({
@@ -77,7 +79,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en-US">
       <body>
         {children}
         <Analytics />

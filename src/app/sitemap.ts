@@ -1,14 +1,10 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.billhillylawncare.com";
-
   return [
     {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 1,
+      url: "https://www.billhillylawncare.com/",
+      lastModified: new Date("2026-08-27"),
     },
   ];
 }

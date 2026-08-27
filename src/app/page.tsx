@@ -7,51 +7,64 @@ import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import Reviews from "@/components/Reviews";
-const localBusinessSchema = {
+import { site } from "@/data/site";
+
+const siteUrl = "https://www.billhillylawncare.com";
+const serviceNames = [
+  "Lawn Mowing",
+  "Weed Control",
+  "Lawn Fertilization",
+  "Spring & Fall Yard Cleanup",
+];
+
+const structuredData = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  name: "Billhilly Lawncare",
-  description:
-    "Veteran owned and operated lawn care service providing mowing, weed eating, fertilization, and seasonal cleanup services in Northwest Arkansas.",
-  url: "https://www.billhillylawncare.com",
-  telephone: "479-257-2137",
-  areaServed: [
+  "@graph": [
     {
-      "@type": "City",
-      name: "Bentonville",
-      addressRegion: "AR",
+      "@type": "LocalBusiness",
+      "@id": `${siteUrl}/#business`,
+      name: site.name,
+      description:
+        "Veteran-owned and operated lawn care service providing mowing, weed control, fertilization, and seasonal yard cleanup in Northwest Arkansas.",
+      url: siteUrl,
+      image: `${siteUrl}/images/og-image.jpg`,
+      telephone: "+1-479-257-2137",
+      address: {
+        "@type": "PostalAddress",
+        addressRegion: "AR",
+        addressCountry: "US",
+      },
+      areaServed: site.areas.map((area) => `${area}, Arkansas`),
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "+1-479-257-2137",
+        contactType: "customer service",
+        areaServed: "US-AR",
+        availableLanguage: "English",
+      },
+      sameAs: [site.facebook, site.google],
+      makesOffer: serviceNames.map((serviceName) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: serviceName,
+          provider: {
+            "@id": `${siteUrl}/#business`,
+          },
+          areaServed: "Northwest Arkansas",
+        },
+      })),
     },
     {
-      "@type": "City",
-      name: "Rogers",
-      addressRegion: "AR",
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      url: `${siteUrl}/`,
+      name: site.name,
+      inLanguage: "en-US",
+      publisher: {
+        "@id": `${siteUrl}/#business`,
+      },
     },
-    {
-      "@type": "City",
-      name: "Bella Vista",
-      addressRegion: "AR",
-    },
-    {
-      "@type": "City",
-      name: "Centerton",
-      addressRegion: "AR",
-    },
-  ],
-  address: {
-    "@type": "PostalAddress",
-    addressRegion: "AR",
-    addressCountry: "US",
-  },
-  sameAs: [
-    "https://www.facebook.com/billhillylawncare",
-  ],
-  serviceType: [
-    "Lawn mowing",
-    "Weed eating",
-    "Weed control",
-    "Fertilization",
-    "Spring cleanup",
-    "Fall cleanup",
   ],
 };
 
@@ -64,7 +77,7 @@ export default function Home() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(localBusinessSchema),
+            __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
           }}
         />
 

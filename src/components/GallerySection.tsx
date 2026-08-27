@@ -55,7 +55,12 @@ export default function GallerySection() {
 
         <FadeIn className="gallery-showcase" delay={0.1}>
           <div className="gallery-main-image">
-            <img src={images[active]} alt="Billhilly Lawncare recent work" />
+            <img
+              src={images[active]}
+              alt={`Billhilly Lawncare recent lawn work in Northwest Arkansas, photo ${active + 1}`}
+              loading="lazy"
+              decoding="async"
+            />
           </div>
 
           <div className="gallery-thumbs">
@@ -67,7 +72,12 @@ export default function GallerySection() {
                 onClick={() => setActive(index)}
                 aria-label={`View lawn work photo ${index + 1}`}
               >
-                <img src={image} alt="Billhilly Lawncare lawn work thumbnail" />
+                <img
+                  src={image}
+                  alt={`Lawn care project ${index + 1} by Billhilly Lawncare`}
+                  loading="lazy"
+                  decoding="async"
+                />
               </button>
             ))}
           </div>

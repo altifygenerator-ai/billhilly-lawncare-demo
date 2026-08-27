@@ -7,7 +7,12 @@ export default function AboutSection() {
     <section className="section about-section" id="about">
       <div className="container about-grid">
         <FadeIn className="about-image">
-          <img src="/images/work-8.jpg" alt="Billhilly Lawncare local lawn work" />
+          <img
+            src="/images/work-8.jpg"
+            alt="Billhilly Lawncare lawn care project in Northwest Arkansas"
+            loading="lazy"
+            decoding="async"
+          />
         </FadeIn>
 
         <FadeIn className="about-content" delay={0.1}>
@@ -17,7 +22,7 @@ export default function AboutSection() {
 
           <p>
             Billhilly Lawncare is a local lawn care company serving Bentonville,
-            Rogers, Bella Vista, and Centerton Arkansas. We are committed to
+            Rogers, Bella Vista, and Centerton, Arkansas. We are committed to
             dependable service, affordable pricing, and making your yard look its
             best.
           </p>

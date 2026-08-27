@@ -11,7 +11,7 @@ export default function Footer() {
           <h3>{site.name}</h3>
           <p>
             Veteran Owned & Operated lawn care serving Bentonville, Rogers,
-            Bella Vista, and Centerton Arkansas.
+            Bella Vista, and Centerton, Arkansas.
           </p>
         </div>
 

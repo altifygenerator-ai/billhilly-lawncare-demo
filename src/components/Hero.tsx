@@ -7,10 +7,13 @@ export default function Hero() {
     <section className="hero">
       <div className="container">
         <div className="hero-content">
-          <div className="eyebrow">Lawn Care in Northwest Arkansas</div>
+          <div className="eyebrow">
+            Lawn Care in Bentonville & Northwest Arkansas
+          </div>
 
           <h1>
-            Reliable lawn care that keeps your yard <span>looking clean.</span>
+            Reliable Northwest Arkansas lawn care that keeps your yard{" "}
+            <span>looking clean.</span>
           </h1>
 
           <p>
