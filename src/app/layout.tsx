@@ -3,7 +3,7 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const siteUrl = "https://www.billhillylawncare.com";
-const title = "Lawn Care in Northwest Arkansas | Billhilly Lawncare";
+const title = "Northwest Arkansas Lawn Care & Mowing | Billhilly Lawncare";
 const description =
   "Veteran-owned Billhilly Lawncare provides mowing, weed control, fertilization, and seasonal yard cleanup in Bentonville, Rogers, Bella Vista, and Centerton, AR.";
 
